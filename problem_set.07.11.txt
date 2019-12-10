@@ -1,0 +1,161 @@
+1) write a python script to get a student details from user using raw_input:
+i) roll_id
+ii) name
+iii) class name
+iv) marks - '58,67,89,99'
+stud_dict = { 'roll_id':{'name':'sakthi','class':'7','marks':[1,2,3,4,5]},
+              'roll_id2':{'name':'sakthi2','class':'8','marks':[1,2,3,4,56]}
+            }
+hints:
+d ={}
+d[k] = sub_dict
+sub_dict[k] =v
+
+ 
+dict1={}
+range1=int(input("enter number of students:\n"))
+for i in range(1,range1+1):
+  dict2={}
+  roll_id=input("enter roll id : ")
+  name=input("enter name : ")
+  class1=input("enter class_name : ")
+  marks=list(input("enter marks : ").split(' '))
+  dict2["name"]=name
+  dict2["class"]=class1
+  dict2["marks"]=marks
+  dict1[roll_id]=dict2
+print(dict1)
+
+
+2)
+a)Given the following dictionary:
+      inventory = {
+                   'gold' : 500,
+                   'pouch' : ['flint', 'twine', 'gemstone'],
+                   'backpack' : ['xylophone','dagger', 'bedroll','bread loaf']
+                }
+       Try to do the followings:
+       i)Add a key to inventory called 'pocket'.
+       ii)Set the value of 'pocket' to be a list consisting of the strings 'seashell', 'strange berry', and 'lint'.
+       iii).sort()the items in the list stored under the 'backpack' key.
+       iv)Then .remove('dagger') from the list of items stored under the 'backpack' key.
+       v)Add 50 to the number stored under the 'gold' key.
+       
+
+inventory = {'gold' : 500,'pouch' : ['flint', 'twine', 'gemstone'],
+          'backpack' : ['xylophone','dagger', 'bedroll','bread loaf']}
+
+i)Add a key to inventory called 'pocket'.
+ii)Set the value of 'pocket' to be a list consisting of the strings 'seashell', 'strange berry', and 'lint'.
+
+inventory['pocket']=['seashell', 'strange berry','lint']
+inventory.update({'pocket':['seashell', 'strange berry','lint']})
+print(inventory)
+
+
+iii).sort()the items in the list stored under the 'backpack' key.
+inventory['backpack'].sort()
+print(inventory)
+
+iv)Then .remove('dagger') from the list of items stored under the 'backpack' key.
+inventory['backpack'].remove('dagger')
+print(inventory)
+
+v)Add 50 to the number stored under the 'gold' key.
+inventory['gold']+=50
+print(inventory)
+
+
+b) create a student details dictionary having {'student1':[marks1,marks2, marks3],'student2':[marks1,marks2,marks3]}
+       i)Create the dictionary as mentioned above
+       ii) need to perform total and average of the marks for each student
+
+dict1={}
+dict1['student1']=[77,88,99]
+dict1['student2']=[66,78,98]
+for key,value in dict1.items():
+  sum=0
+  for num in value:
+    sum+=num
+  print(key,sum)
+ 
+
+i) read the file and calculate the total sum of marks available there
+science = 50
+maths = 90
+english = 85
+tamil = 92
+
+import re
+sum=0
+with open("marks.txt","w") as fw:
+  fw.write("science=50\nmaths=90\nenglish=85\ntamil=92")
+with open("marks.txt","r")as fr:
+  for value in re.findall("\d+",fr.read()):
+    sum+=int(value)
+  print(sum)
+
+i) write a python script to make a simple calculator that can add, subtract, multiply and divide using functions
+   a) have four functions with two arguments
+   b) get the values from user
+   c) Use try and except
+
+try:
+  def add(num1,num2):
+    return num1+num2
+  def subtract(num1,num2):
+    return num1-num2
+  def multiply(num1,num2):
+    return num1*num2
+  def divide(num1,num2):
+    return num1//num2
+  num1=int(input("enter a value\n"))
+  num2=int(input("enter another value\n"))
+  print(add(num1,num2))
+  print(subtract(num1,num2))
+  print(multiply(num1,num2))
+  print(divide(num1,num2))
+except ZeroDivisionError:
+  print("give the second value other than zero for multiplication..") 
+except ValueError:
+  print("provide integer values to perform operations...")
+except:
+  print("error occured..try again")
+
+ii)Define a function that can accept two strings as input and concatenate them and then print it as a output
+
+def concat(string1,string2):
+  print(string1+string2)
+string1=input("enter a string\n")
+string2=input("enter a string\n")
+concat(string1,string2)
+
+iii) write a python script having functions defined to perfrom - sum_digits(1738)
+output should be 1+7+3+8 = 18
+
+number=input("enter a  number")
+sum=0
+for char in number:
+  sum+=int(char)
+print(sum)
+
+iv)  write the below contents to  a file named 'marks.txt' using python script using functions
+science = 50
+maths = 90
+english = 85
+tamil = 92
+
+ i) read the file and calculate the total sum of marks available there
+
+import re
+def write_file():
+  with open("marks.txt","w") as fw:
+    fw.write("science=50\nmaths=90\nenglish=85\ntamil=92")
+def read_file():
+  sum=0
+  with open("marks.txt","r")as fr:
+    for value in re.findall("\d+",fr.read()):
+      sum+=int(value)
+  print(sum)
+write_file()
+read_file()

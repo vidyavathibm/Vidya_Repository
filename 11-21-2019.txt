@@ -1,0 +1,37 @@
+#
+import copy
+
+old_list = [[1,1],[2,2],[3,3]]
+new_list = copy.copy(old_list)
+
+old_list.append([4,4])
+
+print("Old list:", old_list,id(old_list))
+print("New list:", new_list,id(new_list))
+old_list[0][1]='AA'
+print("Old list:", old_list,id(old_list))
+print("New list:", new_list,id(new_list))
+
+#SWAPPING FIRST AND LAST VALUE IN A LIST 
+
+li=[1,2,3,4,5]
+n=len(li)
+print(n)
+li[0],li[n-1]=li[n-1],li[0]
+print(li)
+
+______________________________________________
+
+
+li=[1,2,3,4,5]
+li2=['A','B','C','D']
+dict1={}
+for i in range(len(li)-1):
+  dict1[li[i]]=li2[i]
+print(dict1)
+
+https://www.sqlrelease.com/sql-server-tutorial/types-of-keys
+
+https://www.orafaq.com/comment/6629
+
+https://www.sqlshack.com/case-statement-in-sql/
