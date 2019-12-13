@@ -35,3 +35,5 @@ https://www.sqlrelease.com/sql-server-tutorial/types-of-keys
 https://www.orafaq.com/comment/6629
 
 https://www.sqlshack.com/case-statement-in-sql/
+
+https://www.guru99.com/agile-scrum-extreme-testing.html

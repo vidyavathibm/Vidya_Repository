@@ -1,0 +1,45 @@
+import unittest:
+def sum_digit(li):
+  sum=0
+  for i in li:
+    if type(i)==int:
+      sum=sum+i
+    elif i.isdigit():
+      sum=sum+int(i)
+  print("The sum of digits of a number is ",sum)
+
+sum_digit([22,'none','hai',33,'22'])
+
+class Sample_Test(Unittest.TestCase):
+_________________________________________________________________________________________
+
+https://www.guru99.com/hive-queries-implementation.html
+https://ajaypratapsingh.wordpress.com/2017/08/07/hive-interview-questions/
+
+PFB the answers:
+
+1. Difference between "Sort By" and "Group by" in Hive. How they work?
+Ans. SORT BY sorts the data per reducer, it provides ordering of the rows within a reducer. If there are more than one reducer, "sort by" may give partially ordered final results. Whereas GROUP BY aggregate records by the specified columns which allows you to perform aggregation functions on non-grouped columns (such as SUM, COUNT, AVG, etc).
+
+2. If we use the "Limit 1" in any SQL query in Hive, will Reducer work or not.
+Ans. I think Reducer will work, because as per Hive documentation -- Limit indicates the number of rows to be returned. The rows returned are chosen at random. The following query returns 5 rows from t1 at random.
+
+SELECT * FROM t1 LIMIT 5
+Having to randomly pick, it has to have complete result output from Reducer.
+
+- How to optimize Hive Performance?
+Ans. These links should answer this
+
+- Difference between "Internal Table" and "External Table"
+Ans. "Internal Table" also known as Managed Table, is the one that is managed by Hive. When you point data in HDFS to such table, the data is moved to Hive default location /ust/hive/warehouse/. And, then if such internal table is dropped, the data is deleted along with.
+
+"External table" on the other hand is user managed, and data is not moved to hive default directory after loading i.e, any custom location can be specified. Consecutively, when you drop such table, no data is deleted, only table schema is dropped.
+
+- What is the main difference between Hive and SQL
+Ans. Hive is a Datawarehousing layer on top of hadoop that provides SQL like row table interface to users for analyzing underlying data. It employs HiveQL (HQL) language for this which is loosely based on SQL-92 standards.
+
+SQL is a standard RDBMS language for accessing and manipulating databases.
+
+Internal table : Both metadata and data stored in the hive. If one deletes the table, automatically entire schema and data would be deleted.
+External table : Only metadata is handled by hive. Data is handled by user. If one deletes the table , only schema will be deleted, data remains intact. 
+For creation of external table , one needs to use external keyword in create statement and also needs to specify the location where data is put.
