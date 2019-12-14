@@ -13,6 +13,7 @@ sum_digit([22,'none','hai',33,'22'])
 class Sample_Test(Unittest.TestCase):
 _________________________________________________________________________________________
 
+https://pymbook.readthedocs.io/en/latest/igd.html
 https://www.guru99.com/hive-queries-implementation.html
 https://ajaypratapsingh.wordpress.com/2017/08/07/hive-interview-questions/
 
