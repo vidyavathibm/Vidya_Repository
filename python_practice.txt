@@ -45,3 +45,108 @@ SQL is a standard RDBMS language for accessing and manipulating databases.
 Internal table : Both metadata and data stored in the hive. If one deletes the table, automatically entire schema and data would be deleted.
 External table : Only metadata is handled by hive. Data is handled by user. If one deletes the table , only schema will be deleted, data remains intact. 
 For creation of external table , one needs to use external keyword in create statement and also needs to specify the location where data is put.
+
+
+
+# li=[]
+# li.append([10,20,30])
+# li.append('vidhu')
+# print(li)
+# li.extend('bharuu')
+# print(li)
+# c=range(10,20)
+# iterator=iter(c)
+# print(iterator)
+
+
+# while(True):
+#   i=iterator.__next__()
+#   print(i)
+
+# li=sum(x for x in range(1,10))
+# print(li)
+# li=sum([x for x in range(1,10)])
+# print(li)
+
+
+# def mydecorator(func):
+#   def wrapper(*args):
+#     print("Before call")
+#     result=func(*args)
+#     print(result)
+#     print("After call")
+#     return result
+#   return wrapper
+
+# @mydecorator
+# def add(a,b):
+#   return a+b
+
+# add(10,20)
+
+# list1=[10,20,30,40]
+# iter_list=iter(list1)
+# while(True):
+#   try:
+#     print(iter_list.next())
+#   except StopIteration:
+#     print("End of list")
+#     break
+
+
+# for e in list1:
+
+#   print(e)
+
+
+# class PowTwo:
+#   def __init__(self,max):
+#     self.max=max
+
+#   def __iter__(self):
+#     self.n=0
+#     return self.n
+
+#   def __next__(self):
+#     if self.n<=self.max:
+#       result=2**self.n
+#       self.n+=1
+#       return result
+#     else:
+#       raise StopIteration
+
+# a=PowTwo(4)
+# iterator=iter(a)
+# print(iterator.next())
+
+# for i in PowTwo(5):
+#   print(i)
+
+# class InfIter:
+    
+#     def __iter__(self):
+#         self.num = 1
+#         return self
+
+#     def __next__(self):
+#         num = self.num
+#         self.num += 2
+#         return num
+# a = iter(InfIter())
+# next(a)
+
+# def my_gen(mystr):
+  
+#   for i in range(len(mystr)-1,-1,-1):
+#     yield mystr[i]
+
+# a=my_gen("hello")
+# for i in a:
+#   print(i)
+
+
+# mylist=[10,20,30,40]
+
+# ge=(x**2 for x in mylist)
+# for i in ge:
+#   print(i)
