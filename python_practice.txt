@@ -16,6 +16,7 @@ ________________________________________________________________________________
 https://pymbook.readthedocs.io/en/latest/igd.html
 https://www.guru99.com/hive-queries-implementation.html
 https://ajaypratapsingh.wordpress.com/2017/08/07/hive-interview-questions/
+https://pymbook.readthedocs.io/en/latest/pep8.html
 
 PFB the answers:
 
