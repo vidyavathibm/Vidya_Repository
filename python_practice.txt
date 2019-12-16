@@ -11,6 +11,17 @@ def sum_digit(li):
 sum_digit([22,'none','hai',33,'22'])
 
 class Sample_Test(Unittest.TestCase):
+__________________________________________
+
+list1=[10,20,30,40,50]
+list2=[]
+sum=0
+for i in list1:
+  sum=sum+i
+  list2.append(sum)
+print(list2)
+
+
 _________________________________________________________________________________________
 
 https://pymbook.readthedocs.io/en/latest/igd.html
